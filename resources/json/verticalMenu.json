@@ -1,0 +1,24 @@
+{
+    "menu": [
+        {
+            "url": "admin/dashboard",
+            "name": "Dashboard",
+            "i18n": "Dashboard",
+            "class": "waves-effect waves-cyan",
+            "slug": "dashboard",
+            "icon": "equalizer"
+        },
+        {
+            "navheader": "CUSTOMERS MANAGEMENT",
+            "icon": "more_horiz"
+        },
+        {
+            "url": "admin/administration",
+            "name": "All Users",
+            "i18n": "All Users",
+            "class": "waves-effect waves-cyan",
+            "icon": "person_outline",
+            "slug": "administration"
+        }
+    ]
+}

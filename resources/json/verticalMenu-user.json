@@ -1,0 +1,28 @@
+{
+    "menu": [
+        {
+            "url": "admin/dashboard",
+            "name": "Dashboard",
+            "i18n": "Dashboard",
+            "class": "waves-effect waves-cyan",
+            "slug": "dashboard",
+            "icon": "equalizer"
+        },
+        {
+            "url": "admin/category",
+            "name": "Categories",
+            "i18n": "Categories",
+            "class": "waves-effect waves-cyan",
+            "icon": "format_list_bulleted",
+            "slug": "admin/category"
+        },
+        {
+            "url": "admin/transaction",
+            "name": "Transactions",
+            "i18n": "Transactions",
+            "class": "waves-effect waves-cyan",
+            "icon": "attach_money",
+            "slug": "transaction"
+        }
+    ]
+}
