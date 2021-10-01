@@ -39,6 +39,12 @@ php artisan db:seed
 ```
 ------------
 
+### For unit test
+```bash
+./vendor/bin/phpunit
+```
+------------
+
 ### For login as admin
 ```bash
 email: admin@test.com
