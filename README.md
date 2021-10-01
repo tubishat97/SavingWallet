@@ -41,7 +41,13 @@ php artisan db:seed
 
 ### For unit test
 ```bash
-./vendor/bin/phpunit
+vendor/bin/phpunit
+```
+------------
+
+### Run Project
+```bash
+php artisan serve
 ```
 ------------
 
