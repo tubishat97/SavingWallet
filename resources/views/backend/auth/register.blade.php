@@ -98,9 +98,11 @@
         <div class="input-field col s3">
           <input name="image" id="image" type="file" style="margin-top: 13px;">
           @error('image')
-          <small class="red-text ml-7">
-            {{ $message }}
-          </small>
+          <div>
+            <small class="red-text ml-7">
+              {{ $message }}
+            </small>
+          </div>
           @enderror
         </div>
       </div>

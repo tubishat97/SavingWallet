@@ -209,8 +209,8 @@
                     {
                         ticks: {
                             padding: 20,
-                            stepSize: 10,
-                            max: 100,
+                            stepSize: 100,
+                            max: 1000,
                             min: 0,
                             fontColor: "#9e9e9e"
                         },
@@ -255,8 +255,8 @@
                     {
                         ticks: {
                             padding: 20,
-                            stepSize: 10,
-                            max: 100,
+                            stepSize: 100,
+                            max: 1000,
                             min: 0
                         },
                         gridLines: {
