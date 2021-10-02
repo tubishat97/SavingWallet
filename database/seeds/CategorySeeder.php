@@ -18,7 +18,7 @@ class CategorySeeder extends Seeder
             'Food',
             'Utilities',
             'Insurance',
-            'Medical & Healthcare (5-10 percent)',
+            'Medical & Healthcare',
             'Saving, Investing, & Debt Payments',
             'Personal Spending'
         ];

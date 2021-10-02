@@ -22,6 +22,10 @@
                                 <h4 class="card-title">Add New</h4>
                             </div>
                             <div class="col s12 m6 l2">
+                                @php
+                                    $user = auth()->user();
+                                @endphp
+                                {{ __('Wallet Balance: ') . $user->wallet->amount }}
                             </div>
                         </div>
                     </div>

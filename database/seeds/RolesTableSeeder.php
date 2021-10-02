@@ -28,7 +28,6 @@ class RolesTableSeeder extends Seeder
 
         $superAdminPermissions = [
             'admin management',
-            'customers management',
             'users management',
             'roles',
         ];

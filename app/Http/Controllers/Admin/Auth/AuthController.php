@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\LoginRequest;
 use App\Http\Requests\Admin\RegisterRequest;
 use App\Models\User;
 use App\Models\UserProfile;
@@ -21,12 +22,14 @@ class AuthController extends Controller
     public function showLoginForm()
     {
         $pageConfigs = ['bodyCustomClass' => 'login-bg', 'isCustomizer' => false];
+
         return view('backend.auth.login', ['pageConfigs' => $pageConfigs]);
     }
 
     public function showRegisterForm()
     {
         $pageConfigs = ['bodyCustomClass' => 'login-bg', 'isCustomizer' => false];
+
         return view('backend.auth.register', ['pageConfigs' => $pageConfigs]);
     }
 
@@ -62,33 +65,26 @@ class AuthController extends Controller
 
             return redirect()->intended(route('admin.dashboard'));
         } catch (\Exception $e) {
-            //
+            return redirect()->back();
         }
     }
 
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
-        $this->validate($request, [
-            'username' => 'required',
-            'password' => 'required|min:6'
-        ]);
-
         // Attempt to log the user in
         if (Auth::guard('admin')->attempt(['username' => $request->username, 'password' => $request->password], $request->remember)) {
             return redirect()->intended(route('admin.dashboard'));
         }
 
-        $errors = [
-            'username' => 'Email or password is incorrect',
-        ];
-
-        return redirect()->back()->withInput($request->only('username', 'remember'))->withErrors($errors);
+        return redirect()->back()->withInput($request->only('username', 'remember'))->withErrors(['username' => 'Email or password is incorrect']);
     }
 
     public function logout(Request $request)
     {
-        auth::logout();
+        Auth::logout();
+
         $request->session()->invalidate();
+
         return redirect(route('admin.login_form'));
     }
 }

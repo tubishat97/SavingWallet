@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
         echo ("Cleaning Directories\n");
         $file = new Filesystem;
 
-        $file->cleanDirectory('storage/app/public/customer');
+        $file->cleanDirectory('storage/app/public/user');
     }
 
     public function getProductionModeSeeders()

@@ -66,7 +66,7 @@ class TransactionController extends Controller
             $user = auth()->user();
 
             if ((int)$request->type == TransactionType::Expenses && !$this->canAddExpensesTransaction($user->wallet, $request->amount)) {
-                return redirect()->back()->with('error', 'you dont have enough balance');
+                return redirect()->back()->withErrors(['warning' => 'you dont have enough balance']);
             }
 
             $transaction = new Transaction();
