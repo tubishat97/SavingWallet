@@ -9,20 +9,32 @@
             "icon": "equalizer"
         },
         {
-            "url": "admin/category",
-            "name": "Categories",
-            "i18n": "Categories",
-            "class": "waves-effect waves-cyan",
-            "icon": "format_list_bulleted",
-            "slug": "admin/category"
+            "navheader": "CUSTOMERS MANAGEMENT",
+            "icon": "more_horiz"
         },
         {
-            "url": "admin/transaction",
-            "name": "Transactions",
-            "i18n": "Transactions",
+            "url": "admin/product",
+            "name": "Products",
+            "i18n": "Products",
             "class": "waves-effect waves-cyan",
-            "icon": "attach_money",
-            "slug": "transaction"
+            "icon": "directions_car",
+            "slug": "admin/product"
+        },
+        {
+            "url": "admin/order",
+            "name": "Orders",
+            "i18n": "Orders",
+            "class": "waves-effect waves-cyan",
+            "icon": "receipt",
+            "slug": "admin/order"
+        },
+        {
+            "url": "admin/history",
+            "name": "History",
+            "i18n": "History",
+            "class": "waves-effect waves-cyan",
+            "icon": "history",
+            "slug": "admin/history"
         }
     ]
 }

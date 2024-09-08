@@ -63,7 +63,7 @@ class AuthController extends Controller
 
             Auth::login($user);
 
-            return redirect()->intended(route('admin.dashboard'));
+            return redirect()->intended(route('admin.product.index'));
         } catch (\Exception $e) {
             return redirect()->back();
         }
@@ -73,7 +73,7 @@ class AuthController extends Controller
     {
         // Attempt to log the user in
         if (Auth::guard('admin')->attempt(['username' => $request->username, 'password' => $request->password], $request->remember)) {
-            return redirect()->intended(route('admin.dashboard'));
+            return redirect()->intended(route('admin.product.index'));
         }
 
         return redirect()->back()->withInput($request->only('username', 'remember'))->withErrors(['username' => 'Email or password is incorrect']);

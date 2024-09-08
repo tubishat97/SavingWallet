@@ -44,6 +44,7 @@ class DatabaseSeeder extends Seeder
             TruncateAllTables::class,
             RolesTableSeeder::class,
             UserSeeder::class,
+            ProductSeeder::class
         ];
     }
 

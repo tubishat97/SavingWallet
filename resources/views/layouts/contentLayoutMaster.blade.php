@@ -20,7 +20,7 @@ $configData = Helper::applClasses();
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') | Saving Wallet </title>
+    <title>@yield('title') | Jamal Awwad </title>
     <link rel="apple-touch-icon" href="{{asset('images/favicon/apple-touch-icon-152x152.png')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/favicon/favicon-32x32.png')}}">
 

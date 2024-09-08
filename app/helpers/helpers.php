@@ -24,7 +24,7 @@ class Helper
             'activeMenuType' => '',
             'isFooterDark' => null,
             'isFooterFixed' => false,
-            'templateTitle' => 'Saving Wallet',
+            'templateTitle' => 'Jamal Awwad',
             'isCustomizer' => true,
             'defaultLanguage' => 'en',
             'largeScreenLogo' => 'images/logo/materialize-logo-color.png',
@@ -282,16 +282,23 @@ if (!function_exists('uploadFile')) {
      */
     function uploadFile($folder_name, $file, $old_file = null)
     {
+        // Check if the provided file is a valid uploaded file instance
+        if (!$file instanceof \Illuminate\Http\UploadedFile) {
+            throw new \Exception('Invalid file provided');
+        }
+    
         $filePath = public_path('storage/' . $folder_name);
         if (!File::exists($filePath)) {
             File::makeDirectory($filePath, 0777, true);
         }
+    
         $name = uniqid() . '-' . time() . '.' . $file->getClientOriginalExtension();
         $file->storeAs($folder_name, $name, 'public');
-
+    
         if (!is_null($old_file)) {
             Storage::delete('public/' . $old_file);
         }
+    
         return $folder_name . '/' . $name;
     }
 }

@@ -121,7 +121,7 @@ $(function () {
     $("#page-length-option").DataTable({
         responsive: true,
         columnDefs: [{ targets: "no-sort", orderable: false }],
-        order: [[2, "asc"]],
+        order: [],
         dom: "Bfrtip",
         buttons: {
             dom: {

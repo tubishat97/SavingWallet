@@ -13,12 +13,28 @@
             "icon": "more_horiz"
         },
         {
-            "url": "admin/administration",
-            "name": "All Users",
-            "i18n": "All Users",
+            "url": "admin/product",
+            "name": "Products",
+            "i18n": "Products",
             "class": "waves-effect waves-cyan",
-            "icon": "person_outline",
-            "slug": "administration"
+            "icon": "directions_car",
+            "slug": "admin/product"
+        },
+        {
+            "url": "admin/order",
+            "name": "Orders",
+            "i18n": "Orders",
+            "class": "waves-effect waves-cyan",
+            "icon": "receipt",
+            "slug": "admin/order"
+        },
+        {
+            "url": "admin/history",
+            "name": "History",
+            "i18n": "History",
+            "class": "waves-effect waves-cyan",
+            "icon": "history",
+            "slug": "admin/history"
         }
     ]
 }
